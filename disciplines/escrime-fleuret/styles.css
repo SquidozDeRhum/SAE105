@@ -1,0 +1,60 @@
+header, footer, main, div, article{
+    padding: 2em;
+}
+
+header, footer, main, div, article{
+    margin: 1em;
+}
+
+div{
+    background-color: #BCAB6A;
+    border-radius: 8px;
+}
+
+header{
+    background-color: #BCAB6A;
+    color: white;
+    border-radius: 8px;
+}
+
+nav{
+    display: inline-block;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+header img{
+    width: 110px;
+    height: 80px;
+}
+
+div table img{
+    height: 30px;
+    width: 30px;
+}
+
+div div{
+    background-color: #D6C278;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+div article{
+    background-color: #EDE6CA;
+    border-radius: 8px;
+    width: 33%;
+}
+
+footer{
+    background-color: #BCAB6A;
+    border-radius: 8px;
+}
+
+table th{
+    background-color: #D6C278;
+}
+
+table td{
+    background-color: white;
+}
