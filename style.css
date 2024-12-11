@@ -58,3 +58,8 @@ table th{
 table td{
     background-color: white;
 }
+
+header nav ul li{
+    display: inline;
+    
+}
