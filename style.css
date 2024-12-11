@@ -29,8 +29,9 @@ header img{
 }
 
 div table img{
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 36px;
+    border-radius: 3px;
 }
 
 div div{
