@@ -28,9 +28,18 @@ header img{
     height: 80px;
 }
 
-div table img{
-    height: 20px;
-    width: 36px;
+td {
+    text-align: center;
+    padding: 10px;
+}
+
+tr {
+    height: 6vh;
+}
+
+
+td img {
+    width: 35px;
     border-radius: 3px;
 }
 
@@ -52,11 +61,11 @@ footer{
     border-radius: 8px;
 }
 
-table th{
+table th {
     background-color: #D6C278;
 }
 
-table td{
+table td {
     background-color: white;
 }
 
