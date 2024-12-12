@@ -2,8 +2,12 @@
     font-family: "Paris 2024";
     src: url("polices/paris2024.woff2") format("woff2"),
          url("polices/paris2024.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+}
+
+@font-face {
+    font-family: "Helvetica World";
+    src: url("polices/helveticaworld.woff2") format("woff2"),
+         url("polices/helveticaworld.woff") format("woff");
 }
 
 * {
@@ -11,9 +15,29 @@
     margin: 0;
 }
 
-footer, main, div, article {
+body {
+    font-family: 'Helvetica World', Helvetica, sans-serif;
+}
+
+main, div, article {
     padding: 2em;
     margin: 1em;
+}
+
+header, h1, h2, h3 {
+    font-family: "Paris 2024", Arial, sans-serif;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
 }
 
 header {
@@ -23,8 +47,7 @@ header {
     display: flex;
     padding: 20px;
     font-size: x-large;
-    font-family: "Paris 2024", Arial, sans-serif;
-    font-weight: 900;
+    font-weight: bold;
 }
 
 header img {
@@ -98,5 +121,5 @@ td img {
 
 footer {
     background-color: #BCAB6A;
-    border-radius: 8px;
+    padding: 20px;
 }
