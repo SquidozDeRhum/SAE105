@@ -115,6 +115,7 @@ td img {
     height: 20px;
     object-fit: cover;
     border-radius: 3px;
+    border: 1px solid;
 }
 
 footer {
