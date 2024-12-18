@@ -19,7 +19,7 @@ body {
     font-family: 'Helvetica World', Helvetica, sans-serif;
 }
 
-main, div, article {
+main, article {
     padding: 2em;
     margin: 1em;
 }
@@ -81,6 +81,7 @@ header nav ul li a {
 section {
     background-color: #BCAB6A;
     border-radius: 8px;
+    overflow: hidden;
 }
 
 article {
