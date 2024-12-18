@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Paris 2024";
+    src: url("../polices/paris2024.woff2") format("woff2"),
+         url("../polices/paris2024.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Helvetica World";
+    src: url("../polices/helveticaworld.woff2") format("woff2"),
+         url("../polices/helveticaworld.woff") format("woff");
+}
+
+body {
+    font-family: 'Helvetica World', Helvetica, sans-serif;
+    margin: 0;
+    color: white;
+}
+
+header, h1, h2, h3 {
+    font-family: "Paris 2024", Arial, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+header {
+    background-color: #0082C7;
+    display: grid;
+    grid-area: 1fr 4fr;
+}
+
+header > figure {
+    grid-column: 1;
+    text-align: center;
+}
+
+header > nav {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul, li {
+    display: flex;
+    padding: 0;
+}
+
+li {
+    padding: 0 1vw  ;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+main > section {
+    background-color: #0082C7;
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 3fr 7fr;
+    padding: 2em;
+    margin: 1em;
+    border-radius: 8px;
+}
+
+section > div {
+    display: grid;
+    grid-area: 4 7;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "first second"
+                         "third fourth ";
+}
+
+section > img {
+    grid-area: 1;
+    width: 100%;
+    padding: 1em;
+    margin: 2em;
+    background-color: #3EB5F5;
+    border-radius: 8px;
+}
+
+article {
+    background-color: #3EB5F5;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 1em;
+}
+
+article:nth-child(1) {
+    grid-area: first;
+}
+
+article:nth-child(2) {
+    grid-area: second;
+}
+
+article:nth-child(3) {
+    grid-area: third;
+}
+
+article:nth-child(4) {
+    grid-area: fourth;
+}
+
