@@ -125,3 +125,7 @@ footer {
     background-color: #BCAB6A;
     padding: 20px;
 }
+
+.horizontal {
+    display: flex;
+}
