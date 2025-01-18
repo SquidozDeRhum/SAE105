@@ -137,6 +137,15 @@ footer {
     padding: 0;
 }
 
+#Sportif a {
+    text-decoration: none;
+    color: white;
+}
+
+#Sportif a:hover {
+    color: #3EB5F5;
+}
+
 #Sportif header {
     background-color: #0082C7;
 }
@@ -173,7 +182,6 @@ footer {
 
 #Sportif #portrait {
     display: flex;
-    align-items: stretch;
     justify-content: center;
     grid-column-start: 1;
     margin: 1em;
@@ -183,11 +191,17 @@ footer {
     overflow: hidden;
 }
 
+#Sportif #portrait img {
+   object-fit: cover;
+}
+
 #Sportif article {
+    width: auto;
     background-color: #3EB5F5;
     border-radius: 8px;
     padding: 2em;
     margin: 1em;
+    overflow: hidden;
 }
 
 #Sportif article:nth-child(1) {
@@ -206,13 +220,24 @@ footer {
     grid-area: fourth;
 }
 
-#Sportif section:nth-child(2) > h1 + div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+#Sportif section:nth-child(2) {
+    height: 30vh;
 }
 
-#Sportif figure:nth-child(1) {
-    grid-column: 1;
+#Sportif section:nth-child(2) > h1 + div {
+    display: grid;
+    grid-template-columns: 1fr 7fr 7fr 7fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+}
+
+#Sportif section:nth-child(2) a {
+    color: black;
+}
+
+#Sportif section:nth-child(2) a:hover {
+    color: white;
 }
 
 #Sportif figure:nth-child(2) {
@@ -223,10 +248,23 @@ footer {
     grid-column: 3;
 }
 
+#Sportif figure:nth-child(4) {
+    grid-column: 4;
+}
+
+#Sportif section:nth-child(2) img {
+    border-radius: 8px;
+    width: 25vw;
+    height: 25vh;
+    object-fit: cover;
+}
+
 #Sportif div > figure > figcaption {
+    color: white;
     position: relative;
-    bottom: 2em;
+    bottom: 2.75em;
     left: 1em;
+    height: 0;
 }
 
 #Sportif section:nth-child(3) > div {
@@ -239,6 +277,9 @@ footer {
     padding: 2em;
     margin: 1em;
     border-radius: 8px;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
 }
 
 #Sportif section:nth-child(3) > div > div:nth-child(1) {
@@ -246,6 +287,18 @@ footer {
 }
 
 #Sportif section:nth-child(3) > div > div:nth-child(2) {
+    grid-column: 2;
+}
+
+#Sportif section:nth-child(3) > div > div > div {
+    background-color: #3EB5F5;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+#Sportif section:nth-child(3) > div > img {
     grid-column: 2;
 }
 
