@@ -418,3 +418,24 @@ footer {
     margin: 10px;
     padding: 20px;
 }
+
+#Discipline-fleuret table{
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 10px solid #574D80;
+    
+}
+
+#Discipline-fleuret td{
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+#Discipline-fleuret th{
+    background-color: #796BB3;
+}
+
+#Dicsipline-fleuret tr{
+    height: 6vh;
+}
