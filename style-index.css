@@ -200,3 +200,65 @@ a:hover {
     display: block;
     padding: 10px 0;
 }
+
+#escrime .horizontal {
+    display: flex;
+}
+
+#escrime section > figure,
+#escrime section > h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+#escrime section > figure img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#escrime section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#escrime section > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#escrime section > div > div {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+}
+
+#escrime section > div > div > img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#escrime section > div > div > div > h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#escrime section > div > div > div > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#escrime section > div > div > div > ul > li {
+    margin-bottom: 5px;
+}
+
+#escrime .horizontal section{
+    width: 50%;
+}
