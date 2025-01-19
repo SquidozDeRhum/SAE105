@@ -17,6 +17,7 @@
 
 body {
     font-family: 'Helvetica World', Helvetica, sans-serif;
+    color: white;
 }
 
 main, article {
@@ -26,6 +27,10 @@ main, article {
 
 header, h1, h2, h3 {
     font-family: "Paris 2024", Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    background-color: #574D80;
 }
 
 h1 {
@@ -41,8 +46,7 @@ h3 {
 }
 
 header {
-    background-color: #BCAB6A;
-    color: white;
+    background-color: #574D80;
     font-size: x-large;
     font-weight: bold;
     text-align: center;
@@ -75,32 +79,31 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    color: white;
+    color: inherit;
 }
 
 section {
-    background-color: #BCAB6A;
-    border-radius: 8px;
+    background-color: #796BB3;
+    border-radius: 10px;
     overflow: hidden;
     margin: 10px;
     padding: 20px;
 }
 
 article {
-    background-color: #EDE6CA;
-    border-radius: 8px;
+    background-color: #574D80;
+    border-radius: 10px;
     width: 33%;
 }
 
-div div {
-    background-color: #D6C278;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 10px solid #574D80;
 }
 
 th {
-    background-color: #D6C278;
+    background-color: #796BB3;
 }
 
 tr {
@@ -108,9 +111,13 @@ tr {
 }
 
 td {
-    text-align: center;
     padding: 10px;
     background-color: white;
+    color: black;
+}
+
+td:not(:nth-child(2)) {
+    text-align: center;
 }
 
 td img[alt*="Drapeau"] {
@@ -118,16 +125,212 @@ td img[alt*="Drapeau"] {
     height: 20px;
     object-fit: cover;
     border-radius: 3px;
-    border: 1px solid;
+    border: 1px solid black;
 }
 
 footer {
-    background-color: #BCAB6A;
+    background-color: #796BB3;
     padding: 20px;
 }
 
-.horizontal {
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+
+a:hover {
+    color: #574D80;
+}
+
+#accueil main > div {
+    display: grid;
+    grid-template: auto auto / 1fr auto;
+}
+
+#accueil main > div > :nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#accueil main > div > :nth-child(2) {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#accueil main > div > :nth-child(2) > div {
+    display: grid;
+    grid-template: auto / 1fr 1fr 1fr 1fr;
+}
+
+#accueil main > div > :nth-child(2) > div > article {
+    border-radius: 10px;
+    border: 10px solid #574D80;
+    width: auto;
+}
+
+#accueil main > div > :nth-child(3) {
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+#accueil main > :nth-child(3) > div {
+    display: grid;
+    grid-template: auto / 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#accueil main > :nth-child(3) > div > article {
+    width: auto;
+}
+
+#accueil main > :nth-child(4) > div {
+    display: grid;
+    grid-template: auto auto auto / 1fr 1fr 1fr 1fr 1fr;
+}
+
+#accueil main > :nth-child(4) > div > img {
+    width: 60%;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+section, article {
+    padding: 0;
+}
+
+#accueil section img {
+    width: 100%;
+    margin: 0;
+    display: block;
+}
+
+#accueil section div {
+    margin-top: 10px;
+    padding: 0px 20px 20px 20px;
+}
+
+#accueil section h1, section h2, section h3 {
+    text-indent: 20px;
+    display: block;
+    padding: 10px 0;
+}
+
+#escrime .horizontal {
     display: flex;
+}
+
+#escrime section > figure,
+#escrime section > h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+#escrime section > figure img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#escrime section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#escrime section > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+#escrime section > div > div {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+}
+
+#escrime section > div > div > img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#escrime section > div > div > div > h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#escrime section > div > div > div > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#escrime section > div > div > div > ul > li {
+    margin-bottom: 5px;
+}
+
+#escrime .horizontal section{
+    width: 50%;
+}
+
+#escrime section div div div ul{
+    color: black;
+}
+
+#escrime section ul, #escrime section table{
+    width: 100%;
+}
+
+
+#escrime section > div > div img {
+    transition: transform 0.3s ease;
+}
+
+#escrime section > div > div img:hover {
+    transform: scale(1.1);
+}
+
+#escrime h1{
+    width: 100%;
+}
+
+#escrime section > figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#escrime section > figure img {
+    max-width: 100px;
+    height: auto;
+}
+
+#escrime section ul:not(#escrime section div div ul) {
+    margin: 80px auto;
+    padding: 10px;
+    list-style: none;
+    background-color: #574D80;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 6px black; 
+}
+
+@media (max-width: 768px) {
+    #accueil main > div {
+        display: block;
+    }
+
+    #accueil main > div > :nth-child(2) > div {
+        grid-template: auto auto / 1fr 1fr;
+    }
+
+    #accueil main > :nth-child(3) > div {
+        grid-template: auto auto auto / 1fr 1fr;
+    }
 }
 
 /*Cheung*/
