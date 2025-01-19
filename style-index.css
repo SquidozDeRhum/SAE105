@@ -280,6 +280,34 @@ a:hover {
     transform: scale(1.1);
 }
 
+#escrime h1{
+    width: 100%;
+}
+
+#escrime section > figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#escrime section > figure img {
+    max-width: 100px;
+    height: auto;
+}
+
+#escrime section ul:not(#escrime section div div ul) {
+    margin: 80px auto;
+    padding: 10px;
+    list-style: none;
+    background-color: #574D80;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 6px black; 
+}
+
+
 
 @media (max-width: 768px) {
     #escrime .horizontal {
@@ -319,5 +347,13 @@ a:hover {
     #escrime section > div > div {
         width: 100%;
         margin: 0 auto;
+    }
+
+    #escrime .horizontal section{
+        width: 88%;
+    }
+
+    #escrime .horizontal article{
+        width: 80%;
     }
 }
