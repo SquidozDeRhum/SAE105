@@ -397,3 +397,45 @@ footer {
         padding: 1em;
     }
 }
+
+#Discipline-fleuret header{
+    background-color: #574D80;
+}
+#Discipline-fleuret article{
+    background-color: #574D80;
+    border-radius: 8px;
+    width: 33%;
+    color: white;
+}
+#Discipline-fleuret main > article{
+    width: 93.5%;
+}
+
+#Discipline-fleuret section{
+    background-color: #796BB3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    padding: 20px;
+}
+
+#Discipline-fleuret table{
+    border-collapse: collapse;
+    border-radius: 10px;
+    border: 10px solid #574D80;
+    
+}
+
+#Discipline-fleuret td{
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+#Discipline-fleuret th{
+    background-color: #796BB3;
+}
+
+#Dicsipline-fleuret tr{
+    height: 6vh;
+}
