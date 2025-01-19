@@ -401,3 +401,20 @@ footer {
 #Discipline-fleuret header{
     background-color: #574D80;
 }
+#Discipline-fleuret article{
+    background-color: #574D80;
+    border-radius: 8px;
+    width: 33%;
+    color: white;
+}
+#Discipline-fleuret main > article{
+    width: 93.5%;
+}
+
+#Discipline-fleuret section{
+    background-color: #796BB3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    padding: 20px;
+}
