@@ -212,6 +212,14 @@ footer {
     grid-area: second;
 }
 
+#Sportif article:nth-child(2) > p {
+    background-color: #0082C7;
+    margin: 1em 0 1em 0;
+    padding: 1em;
+    border-radius: 30px;
+    font-family: 'PARIS 2024';
+}
+
 #Sportif article:nth-child(3) {
     grid-area: third;
 }
@@ -310,4 +318,82 @@ footer {
 #Sportif footer {
     background-color: #0082C7;
     padding: 2em;
+}
+
+@media (max-width: 768px) {
+    #Sportif header ul {
+        flex-direction: column;
+    }
+
+    #Sportif header li {
+        margin: 0.5em;
+    }
+
+    #Sportif header figcaption {
+        text-align: center;
+    }
+
+    #Sportif #portrait {
+        display: none;
+    }
+
+    #Sportif main {
+        padding: 1em;
+    }
+    
+    #Sportif section:nth-child(1) {
+        grid-template-columns: 1fr;
+    }
+    
+    #Sportif section:nth-child(1) > div + div {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "first"
+        "second"
+        "third"
+        "fourth";
+    }
+
+    #Sportif section:nth-child(2) h1 + div {
+        grid-template-columns: 1fr 5fr 1fr;
+    }
+    
+    #Sportif figure:nth-child(2) {
+        display: none;
+    }
+
+    
+    #Sportif figure:nth-child(3) {
+        grid-column: 2;
+    }
+    
+    #Sportif figure:nth-child(4) {
+        display: none;
+    }
+    
+    #Sportif section:nth-child(3) div {
+        grid-template: 1fr / 1fr;
+    }
+
+    #Sportif section:nth-child(3) > div > div:nth-child(1) {
+        grid-row: 1;
+    }
+
+    #Sportif section:nth-child(3) > div > div:nth-child(2) {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    #Sportif section:nth-child(3) > div > div {
+        grid-template-columns: 1fr;
+    }
+
+    #Sportif section:nth-child(3) > div  img {
+        grid-column: 1;
+        justify-self: center;
+    }
+
+    #Sportif footer {
+        padding: 1em;
+    }
 }
