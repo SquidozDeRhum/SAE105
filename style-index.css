@@ -262,3 +262,62 @@ a:hover {
 #escrime .horizontal section{
     width: 50%;
 }
+
+#escrime section div div div ul{
+    color: black;
+}
+
+#escrime section ul, #escrime section table{
+    width: 100%;
+}
+
+
+#escrime section > div > div img {
+    transition: transform 0.3s ease;
+}
+
+#escrime section > div > div img:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+    #escrime .horizontal {
+        display: block;
+    }
+    #escrime .horizontal article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #escrime section table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #escrime section ul {
+        margin-bottom: 20px;
+    }
+
+    #escrime section > div > div {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #escrime section > div > div img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    #escrime section > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #escrime section > div > div {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
