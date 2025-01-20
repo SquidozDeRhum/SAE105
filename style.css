@@ -607,6 +607,57 @@ section, article {
     #Sportif footer {
         padding: 1em;
     }
+
+    #escrime .horizontal {
+        display: block;
+    }
+    #escrime .horizontal article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #escrime section table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #escrime section ul {
+        margin-bottom: 20px;
+    }
+
+    #escrime section > div > div {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #escrime section > div > div img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    #escrime section > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #escrime section > div > div {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #escrime .horizontal section{
+        width: 88%;
+    }
+
+    #escrime .horizontal article{
+        width: 80%;
+    }
+
+    #escrime header ul {
+        flex-direction: column;
+    }
 }
 
 #Discipline-fleuret header{
