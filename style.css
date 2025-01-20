@@ -225,6 +225,8 @@ section, article {
 
 #escrime .horizontal {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #escrime section > figure,
@@ -262,6 +264,7 @@ section, article {
 
 #escrime section > div > div > img {
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -327,6 +330,25 @@ section, article {
     width: 80%;
     text-align: center;
     box-shadow: 0 4px 6px black; 
+}
+
+#escrime section div div div li{
+    background-color: #E0E0E0;
+    border-radius: 8px;
+}
+
+#escrime .horizontal article{
+    padding: 20px;
+    margin: 10px;
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+#escrime .horizontal section, 
+#escrime .horizontal article {
+    flex: 1;
+    margin: 10px;
+    width: 90%;
 }
 
 /*Cheung*/
@@ -607,6 +629,77 @@ section, article {
     #Sportif footer {
         padding: 1em;
     }
+
+    #escrime section{
+        width: 100%;
+        padding: 20px;
+        margin: 20px;
+    
+
+    }
+
+    #escrime .horizontal section, 
+    #escrime .horizontal article {
+        flex: 1 1 auto;
+        margin: 10px auto;
+        width: 90%;
+    }
+
+    #escrime .horizontal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    #escrime .horizontal article {
+        width: 100%;
+        margin-bottom: 20px;
+        margin:0 auto 20px;
+    }
+
+    #escrime section table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #escrime section ul {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #escrime section > div > div {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #escrime section > div > div img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    #escrime section > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #escrime section > div > div {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #escrime .horizontal section{
+        width: 100%;
+    }
+
+    #escrime .horizontal article{
+        width: 100%;
+    }
+
+    #escrime header ul {
+        flex-direction: column;
+    }
 }
 
 #Discipline-fleuret header{
@@ -617,10 +710,14 @@ section, article {
     border-radius: 8px;
     width: 33%;
     color: white;
-
+    margin: 10px;
+    padding: 20px;
 }
 #Discipline-fleuret main > section{
-    width: 93.5%;
+    width: auto;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #Discipline-fleuret section{
@@ -655,21 +752,65 @@ section, article {
 #Discipline-fleuret main > :nth-child(2) {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;;
 }
 
-#Discipline-fleuret main > :nth-child(2) > * {
-    width: auto;
-    height: auto;
-    padding: 20px;
-    margin: auto;
-    border-radius: 10px;
-    
+#Discipline-fleuret main > :nth-child(2) > div {
+    display: flex;
 }
 
-#Discipline-fleuret main > :nth-child(2) > div > article{
-    width: auto;
-    height: auto;
-    padding: 20px;
-    margin: auto;
-    border-radius: 10px;
+#Discipline-fleuret section h2{
+    border-radius: 10px 10px 0 0;
 }
+
+#Discipline-fleuret main > :nth-child(1) > p{
+    margin: 20px;
+}
+
+#Discipline-fleuret main > :nth-child(3){
+    float: left;
+    width: 50%;
+    padding: 0 0 10px 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#Discipline-fleuret main > :nth-child(3) h2{
+    border-radius: 0%;
+}
+
+
+#Discipline-fleuret main > :nth-child(3)  article{
+    width: 90%;
+    align-items: center;
+    margin: 25px;
+}
+
+#Discipline-fleuret main > :nth-child(4) > h2{
+    margin: 0 0 10px 0;
+}
+#Discipline-fleuret main > :nth-child(4){
+    margin-top: 20px;
+}
+#Discipline-fleuret main > :nth-child(4) article{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    background-color: #796BB3;
+    width: 90%; 
+}
+
+#Discipline-fleuret main > :nth-child(4) article table{
+    border-radius: 0;
+    box-shadow: -5px 5px 5px rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
