@@ -319,6 +319,16 @@ section, article {
     box-shadow: 0 4px 6px black; 
 }
 
+#escrime section div div div li{
+    background-color: #E0E0E0;
+    border-radius: 8px;
+}
+
+#escrime article{
+    padding: 20px;
+    margin: 10px;
+}
+
 /*Cheung*/
 
 #Sportif main {
