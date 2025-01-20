@@ -607,7 +607,8 @@ section, article {
     border-radius: 8px;
     width: 33%;
     color: white;
-
+    margin: 10px;
+    padding: 20px;
 }
 #Discipline-fleuret main > section{
     width: 93.5%;
@@ -647,19 +648,15 @@ section, article {
     grid-template-columns: 2fr 1fr;
 }
 
-#Discipline-fleuret main > :nth-child(2) > * {
-    width: auto;
-    height: auto;
-    padding: 20px;
-    margin: auto;
-    border-radius: 10px;
-    
+
+
+#Discipline-fleuret main > :nth-child(2) > div {
+    display: flex;
 }
 
-#Discipline-fleuret main > :nth-child(2) > div > article{
+#Discipline-fleuret main > :nth-child(2) > div + article{
     width: auto;
-    height: auto;
-    padding: 20px;
-    margin: auto;
-    border-radius: 10px;
 }
+
+
+
