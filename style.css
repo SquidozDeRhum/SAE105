@@ -96,6 +96,10 @@ article {
     overflow: hidden;
 }
 
+section, article {
+    padding: 0;
+}
+
 table {
     border-collapse: collapse;
     border-radius: 10px;
@@ -143,12 +147,14 @@ a:hover {
     color: #574D80;
 }
 
+/* Accueil */
+
 #accueil main > div {
     display: grid;
     grid-template: auto auto / 1fr auto;
 }
 
-#accueil main > div > :nth-child(1) {
+#accueil main > div > :first-child {
     grid-area: 1 / 1 / 2 / 2;
 }
 
@@ -156,17 +162,24 @@ a:hover {
     grid-area: 2 / 1 / 3 / 2;
 }
 
-#accueil main > div > :nth-child(2) > div {
-    display: grid;
-    grid-template: auto / 1fr 1fr 1fr 1fr;
+#accueil main > div > :nth-child(2) div {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#accueil main > div > :nth-child(2) > div > article {
+#accueil main > div > :nth-child(2) div article {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
     border-radius: 10px;
-    width: auto;
 }
 
-#accueil main > div > :nth-child(2) > div > article > p,
+#accueil main > div > :nth-child(2) div img {
+    max-width: 100%;
+    height: auto;
+}
+
+#accueil main > div > :nth-child(2) div article p,
 #accueil h3
 {
     margin: 0 20px;
@@ -181,32 +194,36 @@ a:hover {
     grid-area: 1 / 2 / 3 / 3;
 }
 
-#accueil main > :nth-child(3) > div {
-    display: grid;
-    grid-template: auto / 1fr 1fr 1fr 1fr 1fr 1fr;
+#accueil main > :nth-child(3) div {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#accueil main > :nth-child(3) > div > article {
-    width: auto;
+#accueil main > :nth-child(3) img {
+    width: 100%;
 }
 
-#accueil main > :nth-child(4) > div {
+#accueil main > :nth-child(3) div article {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+#accueil main > :nth-child(4) div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-#accueil main > :nth-child(4) > div > img {
+#accueil main > :nth-child(4) div img {
     width: 10%;
     object-fit: contain;
     padding: 20px;
 }
 
-section, article {
-    padding: 0;
-}
-
-#accueil section img:not(img[alt*="Drapeau"]):not(#accueil main > :nth-child(4) > div > img) {
+#accueil main > :first-child img,
+#accueil main > div > :first-child img {
     width: 100%;
     margin: 0;
     display: block;
@@ -222,6 +239,8 @@ section, article {
     display: block;
     padding: 10px 0;
 }
+
+/* Escrime */
 
 #escrime .horizontal {
     display: flex;
@@ -351,7 +370,7 @@ section, article {
     width: 90%;
 }
 
-/*Cheung*/
+/* Sportif */
 
 #Sportif main {
     margin: 0;
