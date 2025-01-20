@@ -319,20 +319,6 @@ section, article {
     box-shadow: 0 4px 6px black; 
 }
 
-@media (max-width: 768px) {
-    #accueil main > div {
-        display: block;
-    }
-
-    #accueil main > div > :nth-child(2) > div {
-        grid-template: auto auto / 1fr 1fr;
-    }
-
-    #accueil main > :nth-child(3) > div {
-        grid-template: auto auto auto / 1fr 1fr;
-    }
-}
-
 /*Cheung*/
 
 #Sportif main {
@@ -524,6 +510,18 @@ section, article {
 }
 
 @media (max-width: 768px) {
+    #accueil main > div {
+        display: block;
+    }
+
+    #accueil main > div > :nth-child(2) > div {
+        grid-template: auto auto / 1fr 1fr;
+    }
+
+    #accueil main > :nth-child(3) > div {
+        grid-template: auto auto auto / 1fr 1fr;
+    }
+
     #Sportif header ul {
         flex-direction: column;
     }
@@ -609,8 +607,9 @@ section, article {
     border-radius: 8px;
     width: 33%;
     color: white;
+
 }
-#Discipline-fleuret main > article{
+#Discipline-fleuret main > section{
     width: 93.5%;
 }
 
@@ -639,6 +638,28 @@ section, article {
     background-color: #796BB3;
 }
 
-#Dicsipline-fleuret tr{
+#Discipline-fleuret tr{
     height: 6vh;
+}
+
+#Discipline-fleuret main > :nth-child(2) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#Discipline-fleuret main > :nth-child(2) > * {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
+    
+}
+
+#Discipline-fleuret main > :nth-child(2) > div > article{
+    width: auto;
+    height: auto;
+    padding: 20px;
+    margin: auto;
+    border-radius: 10px;
 }
