@@ -93,7 +93,7 @@ section {
 article {
     background-color: #574D80;
     border-radius: 10px;
-    width: 33%;
+    overflow: hidden;
 }
 
 table {
@@ -163,8 +163,18 @@ a:hover {
 
 #accueil main > div > :nth-child(2) > div > article {
     border-radius: 10px;
-    border: 10px solid #574D80;
     width: auto;
+}
+
+#accueil main > div > :nth-child(2) > div > article > p,
+#accueil h3
+{
+    margin: 0 20px;
+    padding-bottom: 10px;
+}
+
+#accueil h3 {
+    padding-top: 20px;
 }
 
 #accueil main > div > :nth-child(3) {
@@ -181,22 +191,22 @@ a:hover {
 }
 
 #accueil main > :nth-child(4) > div {
-    display: grid;
-    grid-template: auto auto auto / 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #accueil main > :nth-child(4) > div > img {
-    width: 60%;
-    margin: 10px;
-    align-items: center;
-    justify-content: center;
+    width: 10%;
+    object-fit: contain;
+    padding: 20px;
 }
 
 section, article {
     padding: 0;
 }
 
-#accueil section img {
+#accueil section img:not(img[alt*="Drapeau"]):not(#accueil main > :nth-child(4) > div > img) {
     width: 100%;
     margin: 0;
     display: block;
@@ -207,7 +217,7 @@ section, article {
     padding: 0px 20px 20px 20px;
 }
 
-#accueil section h1, section h2, section h3 {
+#accueil section h1, #accueil section h2 {
     text-indent: 20px;
     display: block;
     padding: 10px 0;
