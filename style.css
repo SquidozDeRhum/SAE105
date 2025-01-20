@@ -215,6 +215,8 @@ section, article {
 
 #escrime .horizontal {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #escrime section > figure,
@@ -252,6 +254,7 @@ section, article {
 
 #escrime section > div > div > img {
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -324,9 +327,18 @@ section, article {
     border-radius: 8px;
 }
 
-#escrime article{
+#escrime .horizontal article{
     padding: 20px;
     margin: 10px;
+    width: 48%;
+    margin-bottom: 20px;
+}
+
+#escrime .horizontal section, 
+#escrime .horizontal article {
+    flex: 1;
+    margin: 10px;
+    width: 90%;
 }
 
 /*Cheung*/
@@ -608,12 +620,31 @@ section, article {
         padding: 1em;
     }
 
+    #escrime section{
+        width: 100%;
+        padding: 20px;
+        margin: 20px;
+    
+
+    }
+
+    #escrime .horizontal section, 
+    #escrime .horizontal article {
+        flex: 1 1 auto;
+        margin: 10px auto;
+        width: 90%;
+    }
+
     #escrime .horizontal {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
     #escrime .horizontal article {
         width: 100%;
         margin-bottom: 20px;
+        margin:0 auto 20px;
     }
 
     #escrime section table {
@@ -623,6 +654,7 @@ section, article {
 
     #escrime section ul {
         margin-bottom: 20px;
+        width: 100%;
     }
 
     #escrime section > div > div {
@@ -648,11 +680,11 @@ section, article {
     }
 
     #escrime .horizontal section{
-        width: 88%;
+        width: 100%;
     }
 
     #escrime .horizontal article{
-        width: 80%;
+        width: 100%;
     }
 
     #escrime header ul {
