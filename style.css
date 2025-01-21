@@ -624,10 +624,8 @@ section, article {
         width: 100%;
         padding: 20px;
         margin: 20px;
-    
-
     }
-
+    
     #escrime .horizontal section, 
     #escrime .horizontal article {
         flex: 1 1 auto;
