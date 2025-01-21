@@ -129,7 +129,7 @@ td img[alt*="Drapeau"] {
 }
 
 footer {
-    background-color: #796BB3;
+    background-color: #574D80;
     padding: 20px;
 }
 
@@ -335,6 +335,10 @@ section, article {
 
 /*Cheung*/
 
+h1, h2, #Sportif section:nth-child(3) h2 {
+    background-color: #796BB3;
+}
+
 #Sportif main {
     margin: 0;
     padding: 0;
@@ -346,26 +350,21 @@ section, article {
 }
 
 #Sportif a:hover {
-    color: #3EB5F5;
-}
-
-#Sportif header {
-    background-color: #0082C7;
+    color: #796BB3;
 }
 
 #Sportif section {
-    background-color: #0082C7;
     padding: 2em;
     margin: 1em;
     border-radius: 8px;
+    background-color: #574D80
 }
 
-#Sportif th {
-    background-color: #3EB5F5;
+#Sportif section:nth-child(2) h1, #Sportif section:nth-child(3) h1, #Sportif section:nth-child(4) h1{
+    background-color: #574D80;
 }
 
 #Sportif section:nth-child(1) {
-    background-color: #0082C7;
     display: grid;
     align-items: stretch;
     grid-template-columns: 3fr 7fr;
@@ -389,22 +388,27 @@ section, article {
     grid-column-start: 1;
     margin: 1em;
     padding: 1em;
-    background-color: #3EB5F5;
+    background-color: #796BB3;
     border-radius: 8px;
     overflow: hidden;
 }
 
-#Sportif #portrait img {
+#Sportif img {
    object-fit: cover;
+   border-radius: 8px;
 }
 
 #Sportif article {
     width: auto;
-    background-color: #3EB5F5;
     border-radius: 8px;
     padding: 2em;
     margin: 1em;
     overflow: hidden;
+    background-color: #796BB3;
+}
+
+#Sportif th {
+    padding: 1em;
 }
 
 #Sportif article:nth-child(1) {
@@ -416,7 +420,6 @@ section, article {
 }
 
 #Sportif article:nth-child(2) > p {
-    background-color: #0082C7;
     margin: 1em 0 1em 0;
     padding: 1em;
     border-radius: 30px;
@@ -435,6 +438,10 @@ section, article {
     height: 30vh;
 }
 
+#Sportif section:nth-child(2) h2 {
+    background-color: #574D80;
+}
+
 #Sportif section:nth-child(2) > h1 + div {
     display: grid;
     grid-template-columns: 1fr 7fr 7fr 7fr 1fr;
@@ -443,7 +450,7 @@ section, article {
     height: 100%;
 }
 
-#Sportif section:nth-child(2) a {
+#Sportif section:nth-child(2) a, #Sportif section:nth-child(2) h2 {
     color: black;
 }
 
@@ -467,8 +474,8 @@ section, article {
     border-radius: 8px;
     width: 25vw;
     height: 25vh;
-    object-fit: cover;
 }
+
 
 #Sportif div > figure > figcaption {
     color: white;
@@ -484,13 +491,13 @@ section, article {
 }
 
 #Sportif section:nth-child(3) > div > div {
-    background-color: #3EB5F5;
     padding: 2em;
     margin: 1em;
     border-radius: 8px;
     display: grid;
     align-items: start;
     grid-template-columns: 1fr 1fr;
+    background-color: #796BB3;
 }
 
 #Sportif section:nth-child(3) > div > div:nth-child(1) {
@@ -502,7 +509,6 @@ section, article {
 }
 
 #Sportif section:nth-child(3) > div > div > div {
-    background-color: #3EB5F5;
     grid-column: 1;
     display: flex;
     flex-direction: column;
@@ -516,11 +522,6 @@ section, article {
 #Sportif section:nth-child(4) > div {
     display: flex;
     justify-content: space-around;
-}
-
-#Sportif footer {
-    background-color: #0082C7;
-    padding: 2em;
 }
 
 @media (max-width: 768px) {
