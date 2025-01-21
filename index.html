@@ -9,12 +9,12 @@
     <body id="accueil">
         <header>
             <figure>
-                <img src="images/paris2024-white.png" alt="Logotype Paris 2024" title="Paris 2024">
+                <img src="../images/paris2024-white.png" alt="Logotype Paris 2024" title="Paris 2024">
                 <figcaption>Paris 2024</figcaption>
             </figure>
             <nav>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
+                    <li><a href="../index.html">Accueil</a></li>
                     <li><a href="#">Sites</a></li>
                     <li><a href="#">Disciplines</a></li>
                     <li><a href="#">Épreuves</a></li>
@@ -23,6 +23,23 @@
                     <li><a href="#">À propos</a></li>
                 </ul>
             </nav>
+            <div class="menu-burger">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="burger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </label>
+                <ul class="menu">
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="#">Sites</a></li>
+                    <li><a href="#">Disciplines</a></li>
+                    <li><a href="#">Épreuves</a></li>
+                    <li><a href="#">Sportifs</a></li>
+                    <li><a href="#">Paralympiques</a></li>
+                    <li><a href="#">À propos</a></li>
+                </ul>
+            </div>
         </header>
         <main>
             <section>
@@ -46,24 +63,32 @@
                     <h2>Exploits sportifs</h2>
                     <div>
                         <article>
-                            <h3>Léon Nageant</h3>
-                            <img src="images/accueil/leon-marchand.webp" title="Léon Marchand" alt="Léon Marchand, médaille en main">
-                            <p>4 fois médaillé or, le nageur français casse tout les records sur ces jeux.</p>
+                            <a href="#">
+                                <img src="images/accueil/leon-marchand.webp" title="Léon Marchand" alt="Léon Marchand, médaille en main">
+                                <h3>Léon Nageant</h3>
+                                <p>4 fois médaillé or, le nageur français, Léon Marchand casse tout les records attabli en natation lors des jeux.</p>
+                            </a>
                         </article>
                         <article>
-                            <h3>Deux d'affilés pour le champion hongkongais</h3>
-                            <img src="images/accueil/2eme-victore-cheung-ka-long.webp" title="Cheung Ka Long" alt="Cheung Ka Long, tout juste médaillé">
-                            <p>Cheung Ka Long remporte de nouveau la médaille d'or d'escrime après l'avoir emporte 4 ans plus tôt.</p>
+                            <a href="sportifs/cheungKaLong.html">
+                                <img src="images/accueil/2eme-victore-cheung-ka-long.webp" title="Cheung Ka Long" alt="Cheung Ka Long, tout juste médaillé">
+                                <h3>Deux d'affilés pour le champion hongkongais</h3>
+                                <p>Cheung Ka Long remporte de nouveau la médaille d'or d'escrime après l'avoir emporté 4 ans plus tôt.</p>
+                            </a>
                         </article>
                         <article>
-                            <h3>Quatre à la suisse !</h3>
-                            <img src="images/accueil/catherine-debrunner.webp" title="Catherine Debrunner" alt="Catherine Debrunner">
-                            <p>Catherine Debrunner décroche sa quatrième médaille d'or des jeux.</p>
+                            <a href="#">
+                                <img src="images/accueil/catherine-debrunner.webp" title="Catherine Debrunner" alt="Catherine Debrunner">
+                                <h3>Quatre à la suisse !</h3>
+                                <p>Catherine Debrunner décroche sa quatrième médaille d'or olympique lors de cette saison.</p>
+                            </a>
                         </article>
                         <article>
-                            <h3>Records sur records</h3>
-                            <img src="images/accueil/sydney-mclaughlin-levrone.webp" title="Sydney McLaughlin-Levrone" alt="Sydney McLaughlin-Levrone">
-                            <p>En plus de remporter une quatrième médaille d'or olympiques, Sydney McLaughlin-Levrone bat de nouveau le record mondial avec un temps de 50 s 37.</p>
+                            <a href="#">
+                                <img src="images/accueil/sydney-mclaughlin-levrone.webp" title="Sydney McLaughlin-Levrone" alt="Sydney McLaughlin-Levrone">
+                                <h3>Records sur records</h3>
+                                <p>En plus de remporter une quatrième médaille d'or olympiques, Sydney McLaughlin-Levrone bat de nouveau le record mondial avec un temps de 50 s 37.</p>
+                            </a>
                         </article>
                     </div>
                 </section>
@@ -169,36 +194,169 @@
                                 <td>11</td>
                                 <td>27</td>
                             </tr>
+                            <tr>
+                                <td><img src="images/drapeaux/uz.webp" alt="Drapeau de l'Ouzbékistan" title="Ouzbékistan"></td>
+                                <td>Ouzbékistan</td>
+                                <td>8</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/drapeaux/hu.webp" alt="Drapeau de la Hongrie" title="Hongrie"></td>
+                                <td>Hongrie</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>6</td>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/drapeaux/es.webp" alt="Drapeau de l'Espagne" title="Espagne"></td>
+                                <td>Espagne</td>
+                                <td>5</td>
+                                <td>4</td>
+                                <td>9</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td><img src="images/drapeaux/se.webp" alt="Drapeau de la Suède" title="Suède"></td>
+                                <td>Suède</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>11</td>
+                            </tr>
                         </tbody>
                     </table>
                 </section>
             </div>
             <section>
+                <h2>Catégories sportives</h2>
+                <div>
+                    <article>
+                        <a href="#">
+                            <h3>Sports de combat</h3>
+                            <p>Discipline regroupant des activités physiques où l'affrontement entre deux participants est central, comme le judo ou la boxe.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Course</h3>
+                            <p>Épreuves d'athlétisme mesurant la vitesse ou l'endurance sur différentes distances, comme le 100m ou le 1500m.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Saut</h3>
+                            <p>Compétitions où les athlètes cherchent à atteindre la plus grande hauteur ou distance, comme le saut en longueur ou à la perche.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Cyclisme</h3>
+                            <p>Activités sur deux roues impliquant vitesse et technique, comme le BMX freestyle et racing.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Cyclisme sur piste</h3>
+                            <p>Épreuves de vitesse et d'endurance sur un vélodrome, incluant le keirin ou la poursuite par équipes.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Gymnastique artistique</h3>
+                            <p>Sport mettant en valeur la souplesse et la technique sur des agrès comme le sol ou les barres asymétriques.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Sports collectifs</h3>
+                            <p>Jeux d'équipe où la coopération est essentielle, tels que le volleyball ou le basketball.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Natation vitesse</h3>
+                            <p>Épreuves aquatiques mesurant la rapidité des nageurs sur différentes distances comme le 50m ou le 400m.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Sports d'eau</h3>
+                            <p>Activités nautiques individuelles telles que le kayak ou le canoë monoplace.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Sports de glisse</h3>
+                            <p>Discipline sur surface glissante ou roulante comme le skateboard et le surf.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Équitation</h3>
+                            <p>Épreuves équestres mettant en valeur la maîtrise et l'harmonie entre cavalier et cheval, comme le saut d'obstacles.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="disciplines/escrime-fleuret/escrime-fleuret.html">
+                            <h3>Escrime</h3>
+                            <p>Sport de duel utilisant une arme blanche comme le fleuret ou l'épée.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Sports de raquette</h3>
+                            <p>Jeux nécessitant adresse et précision, comme le tennis ou le badminton.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="#">
+                            <h3>Multisports</h3>
+                            <p>Compétitions combinant plusieurs disciplines, telles que le décathlon ou le pentathlon moderne.</p>
+                        </a>
+                    </article>
+                </div>
+            </section>                    
+            <section>
                 <h2>Sites</h2>
                 <div>
                     <article>
-                        <h3>Paris</h3>
-                        <img src="images/accueil/sites/paris.png" title="Paris" alt="Paris">
+                        <a href="#">
+                            <h3>Paris</h3>
+                            <img src="images/accueil/sites/paris.png" title="Paris" alt="Paris">
+                        </a>
                     </article>
                     <article>
-                        <h3>Saint Denis</h3>
-                        <img src="images/accueil/sites/st-denis.png" title="Saint Denis" alt="Saint Denis">
+                        <a href="#">
+                            <h3>Saint Denis</h3>
+                            <img src="images/accueil/sites/st-denis.png" title="Saint Denis" alt="Saint Denis">
+                        </a>
                     </article>
                     <article>
-                        <h3>Marseille</h3>
-                        <img src="images/accueil/sites/marseille.png" title="Marseille" alt="Marseille">
+                        <a href="#">
+                            <h3>Marseille</h3>
+                            <img src="images/accueil/sites/marseille.png" title="Marseille" alt="Marseille">
+                        </a>
                     </article>
                     <article>
-                        <h3>St Quentin</h3>
-                        <img src="images/accueil/sites/st-quentin-en-yvelines.png" title="Saint Quentin en Yvelines" alt="Saint Quentin en Yvelines">
+                        <a href="#">
+                            <h3>St Quentin</h3>
+                            <img src="images/accueil/sites/st-quentin-en-yvelines.png" title="Saint Quentin en Yvelines" alt="Saint Quentin en Yvelines">
+                        </a>
                     </article>
                     <article>
-                        <h3>Le Bourget</h3>
-                        <img src="images/accueil/sites/le-bourget.png" title="Le Bourget" alt="Le Bourget">
+                        <a href="#">
+                            <h3>Le Bourget</h3>
+                            <img src="images/accueil/sites/le-bourget.png" title="Le Bourget" alt="Le Bourget">
+                        </a>
                     </article>
                     <article>
-                        <h3>Taiarapu Ouest</h3>
-                        <img src="images/accueil/sites/taiarapu-ouest.png" title="Taiarapu Ouest" alt="Taiarapu Ouest">
+                        <a href="#">
+                            <h3>Taiarapu Ouest</h3>
+                            <img src="images/accueil/sites/taiarapu-ouest.png" title="Taiarapu Ouest" alt="Taiarapu Ouest">
+                        </a>
                     </article>
                 </div>
             </section>
@@ -227,7 +385,7 @@
             </p>
             <p>
                 Nous contacter : 
-                <a href="mailto:email@exemple.fr">Email - email@exemple.fr</a> 
+                Email - <a href="mailto:email@exemple.fr">email@exemple.fr</a> 
                 | Téléphone - <a href="tel:+33212345678">02 12 34 56 78</a> 
                 | <a href="#">Politique de confidentialité</a> 
                 | <a href="#">Mentions légales</a> 

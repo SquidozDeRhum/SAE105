@@ -45,6 +45,19 @@ h3 {
     font-size: 1.4em;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header a {
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ddd;
+}
+
 header {
     background-color: #574D80;
     font-size: x-large;
@@ -82,6 +95,10 @@ header nav ul li a {
     color: inherit;
 }
 
+.menu-burger {
+    display: none;
+}
+
 section {
     background-color: #796BB3;
     border-radius: 10px;
@@ -93,13 +110,18 @@ section {
 article {
     background-color: #574D80;
     border-radius: 10px;
-    width: 33%;
+    overflow: hidden;
+}
+
+section, article {
+    padding: 0;
 }
 
 table {
     border-collapse: collapse;
     border-radius: 10px;
     border: 10px solid #574D80;
+    width: 100%;
 }
 
 th {
@@ -129,26 +151,18 @@ td img[alt*="Drapeau"] {
 }
 
 footer {
-    background-color: #796BB3;
+    background-color: #574D80;
     padding: 20px;
 }
 
-a {
-    text-decoration: none;
-    font-weight: bold;
-    color: inherit;
-}
-
-a:hover {
-    color: #574D80;
-}
+/* Accueil */
 
 #accueil main > div {
     display: grid;
     grid-template: auto auto / 1fr auto;
 }
 
-#accueil main > div > :nth-child(1) {
+#accueil main > div > :first-child {
     grid-area: 1 / 1 / 2 / 2;
 }
 
@@ -156,47 +170,90 @@ a:hover {
     grid-area: 2 / 1 / 3 / 2;
 }
 
-#accueil main > div > :nth-child(2) > div {
-    display: grid;
-    grid-template: auto / 1fr 1fr 1fr 1fr;
+#accueil main > div > :nth-child(2) div {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#accueil main > div > :nth-child(2) > div > article {
+#accueil main > div > :nth-child(2) div article {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
     border-radius: 10px;
-    border: 10px solid #574D80;
-    width: auto;
+    transition: all 1s ease 0.1s;
+}
+
+#accueil main > div > :nth-child(2) div article:hover {
+    flex-grow: 2;
+}
+
+#accueil main > div > :nth-child(2) div img {
+    max-width: 100%;
+    height: auto;
+}
+
+#accueil main > div > :nth-child(2) div article p,
+#accueil main > :nth-child(3) p,
+#accueil h3
+{
+    margin: 0 20px;
+    padding-bottom: 10px;
+}
+
+#accueil h3 {
+    padding-top: 20px;
 }
 
 #accueil main > div > :nth-child(3) {
     grid-area: 1 / 2 / 3 / 3;
+    background-color: #574D80;
 }
 
-#accueil main > :nth-child(3) > div {
-    display: grid;
-    grid-template: auto / 1fr 1fr 1fr 1fr 1fr 1fr;
+#accueil main > :nth-child(3) div {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#accueil main > :nth-child(3) > div > article {
-    width: auto;
+#accueil main > :nth-child(3) div a {
+    font-weight: 400;
 }
 
-#accueil main > :nth-child(4) > div {
-    display: grid;
-    grid-template: auto auto auto / 1fr 1fr 1fr 1fr 1fr;
+#accueil main > :nth-child(3) div article,
+#accueil main > :nth-child(4) div article {
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    border-radius: 10px;
+    transition: all 1s ease 0.1s;
 }
 
-#accueil main > :nth-child(4) > div > img {
-    width: 60%;
-    margin: 10px;
-    align-items: center;
+#accueil main > :nth-child(4) div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#accueil main > :nth-child(4) div article:hover {
+    flex-grow: 1.5;
+}
+
+#accueil main > :nth-child(4) img {
+    width: 100%;
+}
+
+#accueil main > :nth-child(5) div {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
-section, article {
-    padding: 0;
+#accueil main > :nth-child(5) div img {
+    width: 10%;
+    object-fit: contain;
+    padding: 20px;
 }
 
-#accueil section img {
+#accueil main > :first-child img,
+#accueil main > div > :first-child img {
     width: 100%;
     margin: 0;
     display: block;
@@ -207,11 +264,33 @@ section, article {
     padding: 0px 20px 20px 20px;
 }
 
-#accueil section h1, section h2, section h3 {
+#accueil section h1, #accueil section h2 {
     text-indent: 20px;
     display: block;
     padding: 10px 0;
 }
+
+#accueil td, #accueil th {
+    border-bottom: 1px solid #ddd;
+}
+
+#accueil tr {
+    background-color: white;
+}
+
+#accueil tr:hover {
+    background-color: #ddd;
+}
+
+#accueil td {
+    background-color: inherit;
+}
+
+#accueil p > a, #accueil p + a {
+    font-style: italic;
+}
+
+/* Escrime */
 
 #escrime .horizontal {
     display: flex;
@@ -230,11 +309,6 @@ section, article {
     width: 100px;
     height: auto;
     margin-right: 10px;
-}
-
-#escrime section h1 {
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 #escrime section > div {
@@ -341,7 +415,11 @@ section, article {
     width: 90%;
 }
 
-/*Cheung*/
+/* Sportif */
+
+#Sportif h1, #Sportif h2, #Sportif section:nth-child(3) h2 {
+    background-color: #796BB3;
+}
 
 #Sportif main {
     margin: 0;
@@ -354,26 +432,21 @@ section, article {
 }
 
 #Sportif a:hover {
-    color: #3EB5F5;
-}
-
-#Sportif header {
-    background-color: #0082C7;
+    color: #796BB3;
 }
 
 #Sportif section {
-    background-color: #0082C7;
     padding: 2em;
     margin: 1em;
     border-radius: 8px;
+    background-color: #574D80
 }
 
-#Sportif th {
-    background-color: #3EB5F5;
+#Sportif section:nth-child(2) h1, #Sportif section:nth-child(3) h1, #Sportif section:nth-child(4) h1{
+    background-color: #574D80;
 }
 
 #Sportif section:nth-child(1) {
-    background-color: #0082C7;
     display: grid;
     align-items: stretch;
     grid-template-columns: 3fr 7fr;
@@ -386,7 +459,7 @@ section, article {
     display: grid;
     grid-column-start: 2;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas: "first second"
                          "third fourth ";
 }
@@ -397,22 +470,45 @@ section, article {
     grid-column-start: 1;
     margin: 1em;
     padding: 1em;
-    background-color: #3EB5F5;
+    background-color: #796BB3;
     border-radius: 8px;
     overflow: hidden;
 }
 
-#Sportif #portrait img {
+#Sportif img {
    object-fit: cover;
+   border-radius: 8px;
 }
 
 #Sportif article {
     width: auto;
-    background-color: #3EB5F5;
     border-radius: 8px;
     padding: 2em;
     margin: 1em;
     overflow: hidden;
+    background-color: #796BB3;
+}
+
+#Sportif table {
+    margin-top: 2em;
+    border-radius: 8px;
+}
+
+#Sportif th {
+    padding: 1em;
+}
+
+#Sportif tbody th, #Sportif tfoot th, #Sportif tfoot a {
+    background-color: inherit;
+    color: black;
+}
+
+#Sportif td {
+    border-bottom: 1px solid #ddd;
+}
+
+#Sportif tr:hover td {
+    background-color: #ddd;
 }
 
 #Sportif article:nth-child(1) {
@@ -423,12 +519,20 @@ section, article {
     grid-area: second;
 }
 
+#Sportif article:nth-child(2) div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2em;
+    height: 30%;
+}
+
 #Sportif article:nth-child(2) > p {
-    background-color: #0082C7;
     margin: 1em 0 1em 0;
     padding: 1em;
     border-radius: 30px;
     font-family: 'PARIS 2024';
+    background-color: #574D80;
 }
 
 #Sportif article:nth-child(3) {
@@ -439,24 +543,30 @@ section, article {
     grid-area: fourth;
 }
 
-#Sportif section:nth-child(2) {
-    height: 30vh;
+#Sportif section:nth-child(2) h2 {
+    background-color: #574D80;
 }
 
 #Sportif section:nth-child(2) > h1 + div {
     display: grid;
-    grid-template-columns: 1fr 7fr 7fr 7fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
     height: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
-#Sportif section:nth-child(2) a {
-    color: black;
+#Sportif section:nth-child(2) figure {
+    transition: transform 1s ease 0.1s;
 }
 
-#Sportif section:nth-child(2) a:hover {
-    color: white;
+#Sportif section:nth-child(2) figure:hover {
+    transform: scale(1.15);
+}
+
+#Sportif figure:nth-child(1) {
+    grid-column: 1;
 }
 
 #Sportif figure:nth-child(2) {
@@ -467,18 +577,13 @@ section, article {
     grid-column: 3;
 }
 
-#Sportif figure:nth-child(4) {
-    grid-column: 4;
-}
-
 #Sportif section:nth-child(2) img {
     border-radius: 8px;
     width: 25vw;
     height: 25vh;
-    object-fit: cover;
 }
 
-#Sportif div > figure > figcaption {
+#Sportif div  figure > figcaption {
     color: white;
     position: relative;
     bottom: 2.75em;
@@ -492,13 +597,13 @@ section, article {
 }
 
 #Sportif section:nth-child(3) > div > div {
-    background-color: #3EB5F5;
     padding: 2em;
     margin: 1em;
     border-radius: 8px;
     display: grid;
     align-items: start;
     grid-template-columns: 1fr 1fr;
+    background-color: #796BB3;
 }
 
 #Sportif section:nth-child(3) > div > div:nth-child(1) {
@@ -510,7 +615,6 @@ section, article {
 }
 
 #Sportif section:nth-child(3) > div > div > div {
-    background-color: #3EB5F5;
     grid-column: 1;
     display: flex;
     flex-direction: column;
@@ -521,17 +625,78 @@ section, article {
     grid-column: 2;
 }
 
-#Sportif section:nth-child(4) > div {
-    display: flex;
-    justify-content: space-around;
-}
-
-#Sportif footer {
-    background-color: #0082C7;
-    padding: 2em;
-}
-
 @media (max-width: 768px) {
+
+    header {
+        grid-template: auto / 1fr;
+    }
+
+    figure + nav {
+        display: none;
+    }
+
+    .menu-burger {
+        display: block;
+    }
+
+    .burger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        z-index: 2;
+    }
+      
+    .burger-icon span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #ffffff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+      
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        list-style: none;
+        display: none;
+        background-color: #574D80;
+    }
+      
+    .menu li {
+        padding: 10px 20px;
+    }
+      
+    .menu li a {
+        text-decoration: none;
+    }
+      
+    #menu-toggle:checked + .burger-icon + .menu {
+        display: block;
+    }
+      
+    #menu-toggle:checked + .burger-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        width: 130%;
+    }
+      
+    #menu-toggle:checked + .burger-icon span:nth-child(2) {
+        opacity: 0;
+    }
+      
+    #menu-toggle:checked + .burger-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        width: 130%;
+    }
+
     #accueil main > div {
         display: block;
     }
@@ -578,19 +743,18 @@ section, article {
     }
 
     #Sportif section:nth-child(2) h1 + div {
-        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-columns: 1fr;
     }
-    
-    #Sportif figure:nth-child(2) {
+ 
+    #Sportif section:nth-child(2) a:nth-child(1) {
         display: none;
     }
 
-    
-    #Sportif figure:nth-child(3) {
-        grid-column: 2;
+    #Sportif section:nth-child(2) a:nth-child(2) {
+        grid-column: 1;
     }
-    
-    #Sportif figure:nth-child(4) {
+
+    #Sportif section:nth-child(2) a:nth-child(3) {
         display: none;
     }
     
@@ -688,6 +852,50 @@ section, article {
     #escrime header ul {
         flex-direction: column;
     }
+
+    #Discipline-fleuret header ul {
+        flex-direction: column;
+    }
+
+    #Discipline-fleuret header li {
+        margin: 0.5em;
+    }
+
+    #Discipline-fleuret header figcaption {
+        text-align: center;
+    } 
+
+    #Discipline-fleuret main > :nth-child(2) > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+    #Discipline-fleuret main > :nth-child(2) > div > article {
+        width: auto;
+    }
+
+    #Discipline-fleuret main > div > section{
+        width: 100%;
+        padding: 20px;
+    }
+
+    #Discipline-fleuret main > :nth-child(5){
+        visibility: hidden;
+        display: none;
+    }
+    #Discipline-fleuret main > :nth-child(3){
+        display: none;
+    }
+
+    #Discipline-fleuret > footer{
+        clear:both;
+    }
+}
+
+#Discipline-fleuret h2{
+    margin: 0;
+    padding: 10px;
 }
 
 #Discipline-fleuret header{
@@ -742,7 +950,7 @@ section, article {
     grid-template-columns: 2fr 1fr;
     display: inline-block;
     margin: 10px;
-    padding: 20px;;
+    padding: 20px;
 }
 
 #Discipline-fleuret main > :nth-child(2) > div {
@@ -772,33 +980,39 @@ section, article {
 
 
 #Discipline-fleuret main > :nth-child(3)  article{
-    width: 90%;
+    width: 85%;
     align-items: center;
     margin: 25px;
 }
 
-#Discipline-fleuret main > :nth-child(4) > h2{
+#Discipline-fleuret main > :nth-child(5) > h2{
     margin: 0 0 10px 0;
 }
-#Discipline-fleuret main > :nth-child(4){
+#Discipline-fleuret main > :nth-child(5){
     margin-top: 20px;
 }
-#Discipline-fleuret main > :nth-child(4) article{
+#Discipline-fleuret main > :nth-child(5) article{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
     background-color: #796BB3;
     width: 90%; 
 }
 
-#Discipline-fleuret main > :nth-child(4) article table{
+#Discipline-fleuret main > :nth-child(5) article table{
     border-radius: 0;
     box-shadow: -5px 5px 5px rgb(0, 0, 0);
 }
 
 
+#Discipline-fleuret main > div{
+    float: left;
+    width: auto;
+    clear:left;
+    width: 50%;
+    margin: 0   ;
+}
 
-
-
-
-
+#Discipline-fleuret main > div > section{
+    width: 75%;
+    padding: 20px 20px 10px 20px;
+}
