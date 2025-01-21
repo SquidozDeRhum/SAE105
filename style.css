@@ -852,6 +852,45 @@ footer {
     #escrime header ul {
         flex-direction: column;
     }
+
+    #Discipline-fleuret header ul {
+        flex-direction: column;
+    }
+
+    #Discipline-fleuret header li {
+        margin: 0.5em;
+    }
+
+    #Discipline-fleuret header figcaption {
+        text-align: center;
+    } 
+
+    #Discipline-fleuret main > :nth-child(2) > div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+    #Discipline-fleuret main > :nth-child(2) > div > article {
+        width: auto;
+    }
+
+    #Discipline-fleuret main > div > section{
+        width: 100%;
+        padding: 20px;
+    }
+
+    #Discipline-fleuret main > :nth-child(5){
+        visibility: hidden;
+        display: none;
+    }
+    #Discipline-fleuret main > :nth-child(3){
+        display: none;
+    }
+
+    #Discipline-fleuret > footer{
+        clear:both;
+    }
 }
 
 #Discipline-fleuret header{
@@ -906,7 +945,7 @@ footer {
     grid-template-columns: 2fr 1fr;
     display: inline-block;
     margin: 10px;
-    padding: 20px;;
+    padding: 20px;
 }
 
 #Discipline-fleuret main > :nth-child(2) > div {
@@ -936,33 +975,39 @@ footer {
 
 
 #Discipline-fleuret main > :nth-child(3)  article{
-    width: 90%;
+    width: 85%;
     align-items: center;
     margin: 25px;
 }
 
-#Discipline-fleuret main > :nth-child(4) > h2{
+#Discipline-fleuret main > :nth-child(5) > h2{
     margin: 0 0 10px 0;
 }
-#Discipline-fleuret main > :nth-child(4){
+#Discipline-fleuret main > :nth-child(5){
     margin-top: 20px;
 }
-#Discipline-fleuret main > :nth-child(4) article{
+#Discipline-fleuret main > :nth-child(5) article{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
     background-color: #796BB3;
     width: 90%; 
 }
 
-#Discipline-fleuret main > :nth-child(4) article table{
+#Discipline-fleuret main > :nth-child(5) article table{
     border-radius: 0;
     box-shadow: -5px 5px 5px rgb(0, 0, 0);
 }
 
 
+#Discipline-fleuret main > div{
+    float: left;
+    width: auto;
+    clear:left;
+    width: 50%;
+    margin: 0   ;
+}
 
-
-
-
-
+#Discipline-fleuret main > div > section{
+    width: 75%;
+    padding: 20px 20px 10px 20px;
+}
