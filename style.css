@@ -96,6 +96,10 @@ header nav ul li a {
     color: inherit;
 }
 
+.menu-burger {
+    display: none;
+}
+
 section {
     background-color: #796BB3;
     border-radius: 10px;
@@ -471,8 +475,26 @@ footer {
     background-color: #796BB3;
 }
 
+#Sportif table {
+    margin-top: 2em;
+    border-radius: 8px;
+}
+
 #Sportif th {
     padding: 1em;
+}
+
+#Sportif tbody th, #Sportif tfoot th, #Sportif tfoot a {
+    background-color: inherit;
+    color: black;
+}
+
+#Sportif td {
+    border-bottom: 1px solid #ddd;
+}
+
+#Sportif tr:hover td {
+    background-color: #ddd;
 }
 
 #Sportif article:nth-child(1) {
@@ -483,11 +505,20 @@ footer {
     grid-area: second;
 }
 
+#Sportif article:nth-child(2) div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2em;
+    height: 30%;
+}
+
 #Sportif article:nth-child(2) > p {
     margin: 1em 0 1em 0;
     padding: 1em;
     border-radius: 30px;
     font-family: 'PARIS 2024';
+    background-color: #574D80;
 }
 
 #Sportif article:nth-child(3) {
@@ -508,18 +539,22 @@ footer {
 
 #Sportif section:nth-child(2) > h1 + div {
     display: grid;
-    grid-template-columns: 1fr 7fr 7fr 7fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
     height: 100%;
 }
 
-#Sportif section:nth-child(2) a, #Sportif section:nth-child(2) h2 {
-    color: black;
+#Sportif section:nth-child(2) figure {
+    transition: transform 1s ease 0.1s;
 }
 
-#Sportif section:nth-child(2) a:hover {
-    color: white;
+#Sportif section:nth-child(2) figure:hover {
+    transform: scale(1.15);
+}
+
+#Sportif figure:nth-child(1) {
+    grid-column: 1;
 }
 
 #Sportif figure:nth-child(2) {
@@ -530,18 +565,13 @@ footer {
     grid-column: 3;
 }
 
-#Sportif figure:nth-child(4) {
-    grid-column: 4;
-}
-
 #Sportif section:nth-child(2) img {
     border-radius: 8px;
     width: 25vw;
     height: 25vh;
 }
 
-
-#Sportif div > figure > figcaption {
+#Sportif div  figure > figcaption {
     color: white;
     position: relative;
     bottom: 2.75em;
@@ -583,12 +613,78 @@ footer {
     grid-column: 2;
 }
 
-#Sportif section:nth-child(4) > div {
-    display: flex;
-    justify-content: space-around;
-}
-
 @media (max-width: 768px) {
+
+    header {
+        grid-template: auto / 1fr;
+    }
+
+    figure + nav {
+        display: none;
+    }
+
+    .menu-burger {
+        display: block;
+    }
+
+    .burger-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        z-index: 2;
+    }
+      
+    .burger-icon span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #ffffff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+      
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        list-style: none;
+        display: none;
+        background-color: #574D80;
+    }
+      
+    .menu li {
+        padding: 10px 20px;
+    }
+      
+    .menu li a {
+        text-decoration: none;
+    }
+      
+    #menu-toggle:checked + .burger-icon + .menu {
+        display: block;
+    }
+      
+    #menu-toggle:checked + .burger-icon span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        width: 130%;
+    }
+      
+    #menu-toggle:checked + .burger-icon span:nth-child(2) {
+        opacity: 0;
+    }
+      
+    #menu-toggle:checked + .burger-icon span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        width: 130%;
+    }
+
     #accueil main > div {
         display: block;
     }
@@ -635,19 +731,18 @@ footer {
     }
 
     #Sportif section:nth-child(2) h1 + div {
-        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-columns: 1fr;
     }
-    
-    #Sportif figure:nth-child(2) {
+ 
+    #Sportif section:nth-child(2) a:nth-child(1) {
         display: none;
     }
 
-    
-    #Sportif figure:nth-child(3) {
-        grid-column: 2;
+    #Sportif section:nth-child(2) a:nth-child(2) {
+        grid-column: 1;
     }
-    
-    #Sportif figure:nth-child(4) {
+
+    #Sportif section:nth-child(2) a:nth-child(3) {
         display: none;
     }
     
@@ -681,8 +776,6 @@ footer {
         width: 100%;
         padding: 20px;
         margin: 20px;
-    
-
     }
 
     #escrime .horizontal section, 
