@@ -118,6 +118,7 @@ table {
     border-collapse: collapse;
     border-radius: 10px;
     border: 10px solid #574D80;
+    width: 100%;
 }
 
 th {
@@ -196,6 +197,7 @@ footer {
 
 #accueil main > div > :nth-child(3) {
     grid-area: 1 / 2 / 3 / 3;
+    background-color: #574D80;
 }
 
 #accueil main > :nth-child(3) div {
@@ -413,7 +415,7 @@ footer {
     display: grid;
     grid-column-start: 2;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas: "first second"
                          "third fourth ";
 }
