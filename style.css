@@ -543,10 +543,6 @@ footer {
     grid-area: fourth;
 }
 
-#Sportif section:nth-child(2) {
-    height: 30vh;
-}
-
 #Sportif section:nth-child(2) h2 {
     background-color: #574D80;
 }
@@ -557,6 +553,8 @@ footer {
     justify-items: center;
     align-items: center;
     height: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 #Sportif section:nth-child(2) figure {
