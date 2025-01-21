@@ -177,6 +177,11 @@ footer {
     flex-grow: 1;
     flex-shrink: 0;
     border-radius: 10px;
+    transition: all 1s ease 0.1s;
+}
+
+#accueil main > div > :nth-child(2) div article:hover {
+    flex-grow: 2;
 }
 
 #accueil main > div > :nth-child(2) div img {
@@ -214,6 +219,11 @@ footer {
     flex-grow: 1;
     flex-shrink: 0;
     border-radius: 10px;
+    transition: all 1s ease 0.1s;
+}
+
+#accueil main > :nth-child(3) div article:hover {
+    flex-grow: 1.2;
 }
 
 #accueil main > :nth-child(4) div {
@@ -244,6 +254,22 @@ footer {
     text-indent: 20px;
     display: block;
     padding: 10px 0;
+}
+
+#accueil td, #accueil th {
+    border-bottom: 1px solid #ddd;
+}
+
+#accueil tr {
+    background-color: white;
+}
+
+#accueil tr:hover {
+    background-color: #ddd;
+}
+
+#accueil td {
+    background-color: inherit;
 }
 
 /* Escrime */
