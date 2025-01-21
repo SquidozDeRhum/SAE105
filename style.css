@@ -893,6 +893,11 @@ footer {
     }
 }
 
+#Discipline-fleuret h2{
+    margin: 0;
+    padding: 10px;
+}
+
 #Discipline-fleuret header{
     background-color: #574D80;
 }
