@@ -746,7 +746,7 @@ footer {
         grid-template-columns: 1fr;
     }
  
-    #Sportif section:nth-child(2) a:nth-child(1) {
+    #Sportif section:nth-child(2) div > a:nth-child(1) {
         display: none;
     }
 
@@ -754,12 +754,13 @@ footer {
         grid-column: 1;
     }
 
+    
+    #Sportif section:nth-child(2) div > a:nth-child(3) {
+        display: none;
+    }
+    
     #Sportif section:nth-child(2) img {
         width: 100%;
-    }
-
-    #Sportif section:nth-child(2) a:nth-child(3) {
-        display: none;
     }
     
     #Sportif section:nth-child(3) div {
