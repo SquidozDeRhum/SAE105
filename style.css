@@ -793,7 +793,7 @@ footer {
         padding: 20px;
         margin: 20px;
     }
-
+    
     #escrime .horizontal section, 
     #escrime .horizontal article {
         flex: 1 1 auto;
@@ -895,6 +895,11 @@ footer {
     #Discipline-fleuret > footer{
         clear:both;
     }
+}
+
+#Discipline-fleuret h2{
+    margin: 0;
+    padding: 10px;
 }
 
 #Discipline-fleuret header{
